@@ -200,16 +200,14 @@ body {
 .hd1 {
     height: 180px;
     width: 180px;
-    position: relative;
+    position: absolute;
     top: 40%;
     left: 5%;
     display: flex;
     justify-content: center;
     align-items: end;
     rotate: 270deg;
-    position: relative;
     font-size: larger;
-
 }
 
 .hd1:hover {
@@ -219,13 +217,12 @@ body {
 .hd2 {
     height: 110px;
     width: 180px;
-    position: relative;
-    top: -25%;
+    position: absolute;
+    top: 0%;
     left: 44%;
     display: flex;
     justify-content: center;
     align-items: end;
-    position: relative;
     font-size: larger;
 
 }
@@ -237,13 +234,12 @@ body {
 .hd3 {
     height: 200px;
     width: 180px;
-    position: relative;
-    top: 0;
+    position: absolute;
+    top: 40%;
     left: 83%;
     display: flex;
     justify-content: center;
     align-items: end;
-    position: relative;
     font-size: larger;
     rotate: 90deg;
 }
@@ -255,13 +251,12 @@ body {
 .hd4 {
     height: 135px;
     width: 200px;
-    position: relative;
-    top: 16%;
+    position: absolute;
+    top: 80%;
     left: 43%;
     display: flex;
     justify-content: center;
-    align-items: start;
-    position: relative;
+    align-items: center;
     font-size: larger;
 }
 
@@ -269,17 +264,27 @@ body {
     cursor: url('svg/down-arrow.svg'), auto;
 }
 
+.lock{
+    height: 150px;
+    width: 150px;
+    background-image: url('svg/lock.svg');
+    background-size: cover;
+}
+#rl1 {
+    position: absolute;
+    top: 40%;
+    left: 60.5%;
+}
 .r1d1 {
     height: 555px;
     width: 125px;
-    position: relative;
+    position: absolute;
     top: 95px;
     left: 78%;
     color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: start;
-    position: relative;
     font-size: 40px;
     padding-top: 55px;
     box-sizing: border-box;
@@ -292,14 +297,13 @@ body {
 .r1d2 {
     height: 555px;
     width: 125px;
-    position: relative;
+    position: absolute;
     top: -470px;
     left: 170px;
     color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: start;
-    position: relative;
     font-size: 40px;
     padding-top: 35px;
     box-sizing: border-box;
@@ -312,14 +316,13 @@ body {
 .r1d3 {
     height: 385px;
     width: 155px;
-    position: relative;
+    position: absolute;
     top: -130%;
     left: 60%;
     color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: start;
-    position: relative;
     font-size: 40px;
     padding-top: 35px;
     box-sizing: border-box;
@@ -332,14 +335,13 @@ body {
 .r2d1 {
     height: 373px;
     width: 145px;
-    position: relative;
+    position: absolute;
     top: 100px;
     left: 45%;
     color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: start;
-    position: relative;
     font-size: 40px;
     font-family: auto;
     padding-top: 55px;
@@ -353,14 +355,13 @@ body {
 .r2d2 {
     height: 555px;
     width: 165px;
-    position: relative;
+    position: absolute;
     top: -310px;
     left: 170px;
     color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: start;
-    position: relative;
     font-size: 40px;
     padding-top: 35px;
     box-sizing: border-box;
@@ -373,14 +374,13 @@ body {
 .r2d3 {
     height: 575px;
     width: 155px;
-    position: relative;
+    position: absolute;
     top: -120%;
     left: 77%;
     color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: start;
-    position: relative;
     font-size: 40px;
     padding-top: 35px;
     box-sizing: border-box;
@@ -393,14 +393,13 @@ body {
 .r3d1 {
     height: 595px;
     width: 155px;
-    position: relative;
+    position: absolute;
     top: 25px;
     left: 10%;
     color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: start;
-    position: relative;
     font-size: 40px;
     padding-top: 55px;
     box-sizing: border-box;
@@ -413,14 +412,13 @@ body {
 .r3d2 {
     height: 385px;
     width: 165px;
-    position: relative;
+    position: absolute;
     top: -465px;
     left: 57%;
     color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: start;
-    position: relative;
     font-size: 40px;
     padding-top: 35px;
     box-sizing: border-box;
@@ -433,14 +431,13 @@ body {
 .r3d3 {
     height: 525px;
     width: 155px;
-    position: relative;
+    position: absolute;
     top: -125%;
     left: 76%;
     color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: start;
-    position: relative;
     font-size: 40px;
     padding-top: 35px;
     box-sizing: border-box;
@@ -453,14 +450,13 @@ body {
 .r4d1 {
     height: 465px;
     width: 197px;
-    position: relative;
+    position: absolute;
     top: 13%;
     left: 60%;
     color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: start;
-    position: relative;
     font-size: 40px;
     padding-top: 35px;
     box-sizing: border-box;
@@ -473,14 +469,13 @@ body {
 .r4d2 {
     height: 555px;
     width: 125px;
-    position: relative;
+    position: absolute;
     top: -395px;
     left: 170px;
     color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: start;
-    position: relative;
     font-size: 40px;
     padding-top: 35px;
     box-sizing: border-box;
@@ -493,14 +488,13 @@ body {
 .r4d3 {
     height: 565px;
     width: 155px;
-    position: relative;
+    position: absolute;
     top: -130%;
     left: 85%;
     color: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: start;
-    position: relative;
     font-size: 40px;
     padding-top: 35px;
     box-sizing: border-box;

@@ -1,4 +1,13 @@
+function unlock() {
+    document.querySelector(".lock").remove();
+    return true;
+}
 function main() {
+    let points = 0;
+    let correct = false;
+    function getpoints(){
+        // alert(points);
+    }
     const hall = document.querySelector('.hall');
     const room1 = document.querySelector('.room1');
     const room2 = document.querySelector('.room2');
@@ -20,6 +29,24 @@ function main() {
     const r6d1 = document.querySelector('.r6d1');
     const r7d1 = document.querySelector('.r7d1');
     const r8d1 = document.querySelector('.r8d1');
+    const r1d2 = document.querySelector('.r1d2');
+    const r2d2 = document.querySelector('.r2d2');
+    const r3d2 = document.querySelector('.r3d2');
+    const r4d2 = document.querySelector('.r4d2');
+    const r5d2 = document.querySelector('.r5d2');
+    const r6d2 = document.querySelector('.r6d2');
+    const r7d2 = document.querySelector('.r7d2');
+    const r8d2 = document.querySelector('.r8d2');
+    const r1d3 = document.querySelector('.r1d3');
+    const r2d3 = document.querySelector('.r2d3');
+    const r3d3 = document.querySelector('.r3d3');
+    const r4d3 = document.querySelector('.r4d3');
+    const r5d3 = document.querySelector('.r5d3');
+    const r6d3 = document.querySelector('.r6d3');
+    const r7d3 = document.querySelector('.r7d3');
+    const r8d3 = document.querySelector('.r8d3');
+    const rl1 = document.querySelector('#rl1');
+    const rl2 = document.querySelector('#rl2');
     hd1.addEventListener('click', () => {
         room1.style.zIndex = '9';
         room1.style.opacity = '100';
@@ -68,6 +95,24 @@ function main() {
         hall.style.opacity = '100';
         hd4.innerHTML = `<b>BEDROOM ROOM</b>`;
     })
+    rl1.addEventListener('click', () => {
+        room1.insertAdjacentHTML("beforeend", `<div class="r1d2"></div>`);
+        correct = unlock();
+        console.log(correct)
+        if (correct) {
+            points++;
+            getpoints()
+        }
+    })
+    rl2.addEventListener('click', () => {
+        room1.insertAdjacentHTML("beforeend", `<div class="r1d3"></div>`);
+        correct = unlock();
+        console.log(correct)
+        if (correct) {
+            points++;
+            getpoints()
+        }
+    }) 
 }
 
 main()
