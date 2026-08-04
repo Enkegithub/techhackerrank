@@ -1,7 +1,6 @@
 body {
     margin: 0px;
     padding: 0px;
-    /* color: white; */
 }
 
 .hall {
@@ -176,18 +175,17 @@ body {
     cursor: url('svg/right-arrow.svg'), auto;
 }
 .hd4 {
-    height: 110px;
+    height: 108px;
     width: 200px;
     position: relative;
-    top: 15%;
+    top: 18%;
     left: 43%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     position: relative;
     font-size: larger;
     font-family: cursive;
-    rotate: 180deg;
 }
 
 .hd4:hover {
