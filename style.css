@@ -1,505 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    margin: 0px;
-    padding: 0px;
     overflow: hidden;
 }
 
-.hall {
-    height: 100%;
-    width: 100%;
+.hall,
+[class^="room"] {
     position: absolute;
-    z-index: 9;
-    opacity: 100;
-    transition: opacity 3s ease-in-out;
-    background-image: url('images/hall.png');
+    inset: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transition: opacity 3s ease-in-out;
+}
+
+[class^="room"] {
+    color: whitesmoke;
+}
+
+/* elements */
+.hall {
+    z-index: 9;
+    opacity: 1;
     font-family: cursive;
+    background-image: url("images/hall.png");
 }
 
 .room1 {
-    height: 100%;
-    width: 100%;
-    position: absolute;
     z-index: 1;
     opacity: 0;
-    transition: opacity 3s ease-in-out;
-    background-image: url('images/room1.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url("images/room1.png");
 }
 
 .room2 {
-    height: 100%;
-    width: 100%;
-    position: absolute;
     z-index: 2;
     opacity: 0;
-    transition: opacity 3s ease-in-out;
-    background-image: url('images/room2.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url("images/room2.png");
 }
 
 .room3 {
-    height: 100%;
-    width: 100%;
-    position: absolute;
     z-index: 3;
     opacity: 0;
-    transition: opacity 3s ease-in-out;
-    background-image: url('images/room3.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url("images/room3.png");
 }
 
 .room4 {
-    height: 100%;
-    width: 100%;
-    position: absolute;
     z-index: 4;
     opacity: 0;
-    transition: opacity 3s ease-in-out;
-    background-image: url('images/room4.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url("images/room4.png");
 }
 
 .room5 {
-    height: 100%;
-    width: 100%;
-    position: absolute;
     z-index: 5;
     opacity: 0;
-    transition: opacity 3s ease-in-out;
-    /* background-image: url('images/room1.png'); */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .room6 {
-    height: 100%;
-    width: 100%;
-    position: absolute;
     z-index: 6;
     opacity: 0;
-    transition: opacity 3s ease-in-out;
-    /* background-image: url('images/room1.png'); */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .room7 {
-    height: 100%;
-    width: 100%;
-    position: absolute;
     z-index: 7;
     opacity: 0;
-    transition: opacity 3s ease-in-out;
-    /* background-image: url('images/room1.png'); */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .room8 {
-    height: 100%;
-    width: 100%;
-    position: absolute;
     z-index: 8;
     opacity: 0;
-    transition: opacity 3s ease-in-out;
-    /* background-image: url('images/room1.png'); */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
+/* rules */
 .rules {
-    border: 1px solid rgba(128, 128, 128, 0.653);
-    height: 50vh;
-    width: 50vw;
     position: absolute;
     top: 25%;
     left: 25%;
+    width: 50vw;
+    height: 50vh;
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(128, 128, 128, 0.349);
+    background: rgba(128, 128, 128, .35);
+    border: 1px solid rgba(128, 128, 128, .65);
     border-radius: 10px;
 }
 
 .rules h1 {
     text-decoration: underline;
-    margin: 0px;
 }
 
 .rules h3 {
-    margin: 0px;
+    margin-top: 4px;
 }
 
-.rules li::marker {
-    content: "◈";
-    font-size: 15px;
-    font-weight: bolder;
+.rules ul {
+    width: 96.7%;
+    height: 100%;
+    margin-top: 5px;
+    padding-left: 25px;
+    overflow: hidden;
+    align-self: flex-start;
+}
+
+.rules ul:hover {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.rules ul::-webkit-scrollbar {
+    width: 12px;
+}
+
+.rules ul::-webkit-scrollbar-track {
+    background: rgba(128, 128, 128, .35);
+    border-radius: 10px;
+}
+
+.rules ul::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, .35);
+    border-radius: 10px;
 }
 
 .rules li {
     list-style: none;
-    font-size: 15px;
     width: 100%;
-    margin-right: 10px;
     padding-right: 20px;
-    list-style-position: inside;
-    box-sizing: border-box;
+    font-size: 15px;
 }
 
 .rules li::before {
-    content: " ";
-    padding-right: 10px;
+    content: "◈";
+    margin-right: 10px;
 }
 
-.rules ul {
-    margin: 0px;
-    margin-top: 5px;
-    padding-left: 25px;
-    align-self: flex-start;
-    overflow: hidden;
-    width: 96.7%;
-    height: 100%;
-}
-
-.rules ul:hover {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    cursor: default;
-}
-
-.rules ul:hover::-webkit-scrollbar {
-    width: 12.5px;
-}
-
-.rules ul:hover::-webkit-scrollbar-track {
-    background: rgba(128, 128, 128, 0.349);
-    border-radius: 10px;
-}
-
-.rules ul:hover::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.34);
-    border-radius: 10px;
+/* hall doors */
+.hd1,
+.hd2,
+.hd3,
+.hd4 {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    font-size: larger;
 }
 
 .hd1 {
     height: 180px;
     width: 180px;
-    position: absolute;
     top: 40%;
     left: 5%;
-    display: flex;
-    justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     rotate: 270deg;
-    font-size: larger;
-}
-
-.hd1:hover {
-    cursor: url('svg/left-arrow.svg'), auto;
 }
 
 .hd2 {
     height: 110px;
     width: 180px;
-    position: absolute;
-    top: 0%;
+    top: 0;
     left: 44%;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    font-size: larger;
-
-}
-
-.hd2:hover {
-    cursor: url('svg/up-arrow.svg'), auto;
+    align-items: flex-end;
 }
 
 .hd3 {
     height: 200px;
     width: 180px;
-    position: absolute;
     top: 40%;
     left: 83%;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    font-size: larger;
+    align-items: flex-end;
     rotate: 90deg;
-}
-
-.hd3:hover {
-    cursor: url('svg/right-arrow.svg'), auto;
 }
 
 .hd4 {
     height: 135px;
     width: 200px;
-    position: absolute;
     top: 80%;
     left: 43%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: larger;
 }
 
-.hd4:hover {
-    cursor: url('svg/down-arrow.svg'), auto;
+/* cursor */
+.hd1,
+.rdl1,
+.r2d2,
+.rd3,
+.r4d2 {
+    cursor: url("svg/left-arrow.svg"), auto;
 }
 
-.lock{
-    height: 150px;
+.hd2,
+.rdl2,
+.rd2,
+.r3d2,
+.r4d1 {
+    cursor: url("svg/up-arrow.svg"), auto;
+}
+
+.hd3,
+.rd1,
+.r2d3,
+.r3d3,
+.r4d3 {
+    cursor: url("svg/right-arrow.svg"), auto;
+}
+
+.hd4 {
+    cursor: url("svg/down-arrow.svg"), auto;
+}
+
+/* lock */
+.lock {
     width: 150px;
-    background-image: url('svg/lock.svg');
-    background-size: cover;
+    height: 150px;
+    background: url("svg/lock.svg") center/cover no-repeat;
 }
+
 #rl1 {
     position: absolute;
     top: 40%;
     left: 60.5%;
 }
-.r1d1 {
-    height: 555px;
-    width: 125px;
+
+/* room doors */
+.rd1,
+.rdl1,
+.rdl2,
+.rd2,
+.r2d2,
+.r2d3,
+.rd3,
+.r3d2,
+.r3d3,
+.r4d1,
+.r4d2,
+.r4d3 {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--white);
+    font-size: 40px;
+    box-sizing: border-box;
+}
+
+.rd1 {
     top: 95px;
     left: 78%;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    font-size: 40px;
-    padding-top: 55px;
-    box-sizing: border-box;
-}
-
-.r1d1:hover {
-    cursor: url('svg/right-arrow.svg'), auto;
-}
-
-.r1d2 {
-    height: 555px;
     width: 125px;
-    position: absolute;
+    height: 555px;
+    padding-top: 55px;
+}
+
+.rdl1 {
     top: -470px;
     left: 170px;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    font-size: 40px;
+    width: 125px;
+    height: 555px;
     padding-top: 35px;
-    box-sizing: border-box;
 }
 
-.r1d2:hover {
-    cursor: url('svg/left-arrow.svg'), auto;
-}
-
-.r1d3 {
-    height: 385px;
-    width: 155px;
-    position: absolute;
+.rdl2 {
     top: -130%;
     left: 60%;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    font-size: 40px;
+    width: 155px;
+    height: 385px;
     padding-top: 35px;
-    box-sizing: border-box;
 }
 
-.r1d3:hover {
-    cursor: url('svg/up-arrow.svg'), auto;
-}
-
-.r2d1 {
-    height: 373px;
-    width: 145px;
-    position: absolute;
+.rd2 {
     top: 100px;
     left: 45%;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    font-size: 40px;
-    font-family: auto;
+    width: 145px;
+    height: 373px;
     padding-top: 55px;
-    box-sizing: border-box;
-}
-
-.r2d1:hover {
-    cursor: url('svg/up-arrow.svg'), auto;
+    font-family: auto;
 }
 
 .r2d2 {
-    height: 555px;
-    width: 165px;
-    position: absolute;
     top: -310px;
     left: 170px;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    font-size: 40px;
+    width: 165px;
+    height: 555px;
     padding-top: 35px;
-    box-sizing: border-box;
-}
-
-.r2d2:hover {
-    cursor: url('svg/left-arrow.svg'), auto;
 }
 
 .r2d3 {
-    height: 575px;
-    width: 155px;
-    position: absolute;
     top: -120%;
     left: 77%;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    font-size: 40px;
-    padding-top: 35px;
-    box-sizing: border-box;
-}
-
-.r2d3:hover {
-    cursor: url('svg/right-arrow.svg'), auto;
-}
-
-.r3d1 {
-    height: 595px;
     width: 155px;
-    position: absolute;
+    height: 575px;
+    padding-top: 35px;
+}
+
+.rd3 {
     top: 25px;
     left: 10%;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    font-size: 40px;
+    width: 155px;
+    height: 595px;
     padding-top: 55px;
-    box-sizing: border-box;
-}
-
-.r3d1:hover {
-    cursor: url('svg/left-arrow.svg'), auto;
 }
 
 .r3d2 {
-    height: 385px;
-    width: 165px;
-    position: absolute;
     top: -465px;
     left: 57%;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    font-size: 40px;
+    width: 165px;
+    height: 385px;
     padding-top: 35px;
-    box-sizing: border-box;
-}
-
-.r3d2:hover {
-    cursor: url('svg/up-arrow.svg'), auto;
 }
 
 .r3d3 {
-    height: 525px;
-    width: 155px;
-    position: absolute;
     top: -125%;
     left: 76%;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    font-size: 40px;
+    width: 155px;
+    height: 525px;
     padding-top: 35px;
-    box-sizing: border-box;
-}
-
-.r3d3:hover {
-    cursor: url('svg/right-arrow.svg'), auto;
 }
 
 .r4d1 {
-    height: 465px;
-    width: 197px;
-    position: absolute;
     top: 13%;
     left: 60%;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    font-size: 40px;
+    width: 197px;
+    height: 465px;
     padding-top: 35px;
-    box-sizing: border-box;
-}
-
-.r4d1:hover {
-    cursor: url('svg/up-arrow.svg'), auto;
 }
 
 .r4d2 {
-    height: 555px;
-    width: 125px;
-    position: absolute;
     top: -395px;
     left: 170px;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    font-size: 40px;
+    width: 125px;
+    height: 555px;
     padding-top: 35px;
-    box-sizing: border-box;
-}
-
-.r4d2:hover {
-    cursor: url('svg/left-arrow.svg'), auto;
 }
 
 .r4d3 {
-    height: 565px;
-    width: 155px;
-    position: absolute;
     top: -130%;
     left: 85%;
-    color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    font-size: 40px;
+    width: 155px;
+    height: 565px;
     padding-top: 35px;
-    box-sizing: border-box;
-}
-
-.r4d3:hover {
-    cursor: url('svg/right-arrow.svg'), auto;
 }

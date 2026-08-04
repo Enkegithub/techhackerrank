@@ -1,3 +1,4 @@
+//unlock doors
 function unlock() {
     document.querySelector(".lock")?.remove();
     return true;
@@ -6,27 +7,27 @@ function unlock() {
 function main() {
     let points = 0;
 
+    //points representation
     function getPoints() {
         console.log("Points:", points);
     }
 
+    //elements
     const hall = document.querySelector(".hall");
-
     const rooms = [];
     const hallDoors = [];
     const roomDoors = [];
     const roomlockDoors = [];
     const locks = [];
 
+    //variables
     for (let i = 1; i <= 8; i++) {
         rooms[i] = document.querySelector(`.room${i}`);
     }
-    
     for (let i = 1; i <= 4; i++) {
         hallDoors[i] = document.querySelector(`.hd${i}`);
         roomDoors[i] = document.querySelector(`.r${i}d1`);
     }
-
     for (let i = 1; i <= 2; i++){
         locks[i] = document.querySelector(`#rl${i}`);
     }
@@ -38,6 +39,7 @@ function main() {
         room4:"BEDROOM ROOM"
     };
 
+    //hall -> room
     for (let i = 1; i <= 4; i++) {
         hallDoors[i].addEventListener("click", () => {
             rooms[i].style.zIndex = "9";
@@ -47,6 +49,7 @@ function main() {
         });
     }
 
+    //room -> hall
     for (let i = 1; i <= 4; i++) {
         roomDoors[i].addEventListener("click", () => {
             rooms[i].style.zIndex = i;
@@ -56,6 +59,7 @@ function main() {
         });
     }
 
+    //lock unlock
     for (let i = 1; i <= 2; i++) {
         locks[i].addEventListener("click", (e) => {
             e.target.parentElement.insertAdjacentHTML("beforeend",`<div class="rdl${i}"></div>`);
