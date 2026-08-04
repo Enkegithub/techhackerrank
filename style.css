@@ -1,0 +1,241 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    /* color: white; */
+}
+
+.hall {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 9;
+    opacity: 100;
+    transition: opacity 3s ease-in-out;
+    background-image: url('images/hall.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.room1 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+    background-image: url('images/room1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.room2 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+    background-image: url('images/room2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.room3 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+    background-image: url('images/room3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.room4 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 4;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+    background-image: url('images/room4.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.room5 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 5;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+    /* background-image: url('images/room1.png'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.room6 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 6;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+    /* background-image: url('images/room1.png'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.room7 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 7;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+    /* background-image: url('images/room1.png'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.room8 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 8;
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+    /* background-image: url('images/room1.png'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hd1 {
+    height: 180px;
+    width: 180px;
+    position: relative;
+    top: 40%;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    rotate: 270deg;
+    position: relative;
+    font-size: larger;
+    font-family: cursive;
+}
+
+.hd1:hover {
+    cursor: url('svg/left-arrow.svg'), auto;
+}
+
+.hd2 {
+    height: 110px;
+    width: 180px;
+    position: relative;
+    top: -25%;
+    left: 44%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    font-size: larger;
+    font-family: cursive;
+}
+
+.hd2:hover {
+    cursor: url('svg/up-arrow.svg'), auto;
+}
+.hd3 {
+    height: 200px;
+    width: 180px;
+    position: relative;
+    top: 0;
+    left: 83%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    font-size: larger;
+    font-family: cursive;
+    rotate: 90deg;
+}
+
+.hd3:hover {
+    cursor: url('svg/right-arrow.svg'), auto;
+}
+.hd4 {
+    height: 110px;
+    width: 200px;
+    position: relative;
+    top: 15%;
+    left: 43%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: larger;
+    font-family: cursive;
+    rotate: 180deg;
+}
+
+.hd4:hover {
+    cursor: url('svg/down-arrow.svg'), auto;
+}
+
+
+.r1d1 {
+    border: 1px solid yellow;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 0;
+}
+
+.r1d1:hover {
+    cursor: url('svg/left-arrow.svg'), auto;
+}
+.r2d1 {
+    border: 1px solid yellow;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 0;
+}
+
+.r2d1:hover {
+    cursor: url('svg/left-arrow.svg'), auto;
+}
+.r3d1 {
+    border: 1px solid yellow;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 0;
+}
+
+.r3d1:hover {
+    cursor: url('svg/left-arrow.svg'), auto;
+}
+.r4d1 {
+    border: 1px solid yellow;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 0;
+}
+
+.r4d1:hover {
+    cursor: url('svg/left-arrow.svg'), auto;
+}
