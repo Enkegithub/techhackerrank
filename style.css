@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
+    overflow: hidden;
 }
 
 .hall {
@@ -14,6 +15,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    font-family: cursive;
 }
 
 .room1 {
@@ -121,7 +123,7 @@ body {
 }
 
 .rules {
-    border: 1px solid yellow;
+    border: 1px solid rgba(128, 128, 128, 0.653);
     height: 50vh;
     width: 50vw;
     position: absolute;
@@ -131,31 +133,28 @@ body {
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    
+    background-color: rgba(128, 128, 128, 0.349);
+    border-radius: 10px;
 }
 
 .rules h1 {
-    font-family: cursive;
     text-decoration: underline;
     margin: 0px;
 }
 
 .rules h3 {
-    font-family: cursive;
     margin: 0px;
 }
 
 .rules li::marker {
     content: "◈";
     font-size: 15px;
-    font-family: cursive;
     font-weight: bolder;
 }
 
 .rules li {
     list-style: none;
     font-size: 15px;
-    font-family: cursive;
     width: 100%;
     margin-right: 10px;
     padding-right: 20px;
@@ -167,31 +166,37 @@ body {
     content: " ";
     padding-right: 10px;
 }
+
 .rules ul {
     margin: 0px;
     margin-top: 5px;
     padding-left: 25px;
     align-self: flex-start;
     overflow: hidden;
-    width: 97%;
+    width: 96.7%;
     height: 100%;
 }
+
 .rules ul:hover {
     overflow-y: scroll;
     overflow-x: hidden;
     cursor: default;
 }
+
 .rules ul:hover::-webkit-scrollbar {
     width: 12.5px;
 }
+
 .rules ul:hover::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: rgba(128, 128, 128, 0.349);
     border-radius: 10px;
 }
+
 .rules ul:hover::-webkit-scrollbar-thumb {
-    background: #888;
+    background: rgba(255, 255, 255, 0.34);
     border-radius: 10px;
 }
+
 .hd1 {
     height: 180px;
     width: 180px;
@@ -204,8 +209,7 @@ body {
     rotate: 270deg;
     position: relative;
     font-size: larger;
-    font-family: cursive;
-    border: 1px solid yellow;
+
 }
 
 .hd1:hover {
@@ -223,8 +227,7 @@ body {
     align-items: end;
     position: relative;
     font-size: larger;
-    font-family: cursive;
-    border: 1px solid yellow;
+
 }
 
 .hd2:hover {
@@ -242,9 +245,7 @@ body {
     align-items: end;
     position: relative;
     font-size: larger;
-    font-family: cursive;
     rotate: 90deg;
-    border: 1px solid yellow;
 }
 
 .hd3:hover {
@@ -252,7 +253,7 @@ body {
 }
 
 .hd4 {
-    height: 115px;
+    height: 135px;
     width: 200px;
     position: relative;
     top: 16%;
@@ -262,59 +263,249 @@ body {
     align-items: start;
     position: relative;
     font-size: larger;
-    font-family: cursive;
-    border: 1px solid yellow;
 }
 
 .hd4:hover {
     cursor: url('svg/down-arrow.svg'), auto;
 }
 
-
 .r1d1 {
-    border: 1px solid yellow;
-    height: 100px;
-    width: 100px;
+    height: 555px;
+    width: 125px;
     position: relative;
-    top: 0;
+    top: 95px;
+    left: 78%;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    font-size: 40px;
+    padding-top: 55px;
+    box-sizing: border-box;
 }
 
 .r1d1:hover {
+    cursor: url('svg/right-arrow.svg'), auto;
+}
+
+.r1d2 {
+    height: 555px;
+    width: 125px;
+    position: relative;
+    top: -470px;
+    left: 170px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    font-size: 40px;
+    padding-top: 35px;
+    box-sizing: border-box;
+}
+
+.r1d2:hover {
     cursor: url('svg/left-arrow.svg'), auto;
+}
+
+.r1d3 {
+    height: 385px;
+    width: 155px;
+    position: relative;
+    top: -130%;
+    left: 60%;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    font-size: 40px;
+    padding-top: 35px;
+    box-sizing: border-box;
+}
+
+.r1d3:hover {
+    cursor: url('svg/up-arrow.svg'), auto;
 }
 
 .r2d1 {
-    border: 1px solid yellow;
-    height: 100px;
-    width: 100px;
+    height: 373px;
+    width: 145px;
     position: relative;
-    top: 0;
+    top: 100px;
+    left: 45%;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    font-size: 40px;
+    font-family: auto;
+    padding-top: 55px;
+    box-sizing: border-box;
 }
 
 .r2d1:hover {
+    cursor: url('svg/up-arrow.svg'), auto;
+}
+
+.r2d2 {
+    height: 555px;
+    width: 165px;
+    position: relative;
+    top: -310px;
+    left: 170px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    font-size: 40px;
+    padding-top: 35px;
+    box-sizing: border-box;
+}
+
+.r2d2:hover {
     cursor: url('svg/left-arrow.svg'), auto;
 }
 
-.r3d1 {
-    border: 1px solid yellow;
-    height: 100px;
-    width: 100px;
+.r2d3 {
+    height: 575px;
+    width: 155px;
     position: relative;
-    top: 0;
+    top: -120%;
+    left: 77%;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    font-size: 40px;
+    padding-top: 35px;
+    box-sizing: border-box;
+}
+
+.r2d3:hover {
+    cursor: url('svg/right-arrow.svg'), auto;
+}
+
+.r3d1 {
+    height: 595px;
+    width: 155px;
+    position: relative;
+    top: 25px;
+    left: 10%;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    font-size: 40px;
+    padding-top: 55px;
+    box-sizing: border-box;
 }
 
 .r3d1:hover {
     cursor: url('svg/left-arrow.svg'), auto;
 }
 
-.r4d1 {
-    border: 1px solid yellow;
-    height: 100px;
-    width: 100px;
+.r3d2 {
+    height: 385px;
+    width: 165px;
     position: relative;
-    top: 0;
+    top: -465px;
+    left: 57%;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    font-size: 40px;
+    padding-top: 35px;
+    box-sizing: border-box;
+}
+
+.r3d2:hover {
+    cursor: url('svg/up-arrow.svg'), auto;
+}
+
+.r3d3 {
+    height: 525px;
+    width: 155px;
+    position: relative;
+    top: -125%;
+    left: 76%;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    font-size: 40px;
+    padding-top: 35px;
+    box-sizing: border-box;
+}
+
+.r3d3:hover {
+    cursor: url('svg/right-arrow.svg'), auto;
+}
+
+.r4d1 {
+    height: 465px;
+    width: 197px;
+    position: relative;
+    top: 13%;
+    left: 60%;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    font-size: 40px;
+    padding-top: 35px;
+    box-sizing: border-box;
 }
 
 .r4d1:hover {
+    cursor: url('svg/up-arrow.svg'), auto;
+}
+
+.r4d2 {
+    height: 555px;
+    width: 125px;
+    position: relative;
+    top: -395px;
+    left: 170px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    font-size: 40px;
+    padding-top: 35px;
+    box-sizing: border-box;
+}
+
+.r4d2:hover {
     cursor: url('svg/left-arrow.svg'), auto;
+}
+
+.r4d3 {
+    height: 565px;
+    width: 155px;
+    position: relative;
+    top: -130%;
+    left: 85%;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+    font-size: 40px;
+    padding-top: 35px;
+    box-sizing: border-box;
+}
+
+.r4d3:hover {
+    cursor: url('svg/right-arrow.svg'), auto;
 }

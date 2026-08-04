@@ -24,25 +24,25 @@ function main() {
         room1.style.zIndex = '9';
         room1.style.opacity = '100';
         hall.style.opacity = '0';
-        r1d1.innerHTML = `hello world`;
+        r1d1.innerHTML = `HALL`;
     })
     hd2.addEventListener('click', () => {
         room2.style.zIndex = '9';
         room2.style.opacity = '100';
         hall.style.opacity = '0';
-        r2d1.innerHTML = `hello world`;
+        r2d1.innerHTML = `HALL`;
     })
     hd3.addEventListener('click', () => {
         room3.style.zIndex = '9';
         room3.style.opacity = '100';
         hall.style.opacity = '0';
-        r3d1.innerHTML = `hello world`;
+        r3d1.innerHTML = `HALL`;
     })
     hd4.addEventListener('click', () => {
         room4.style.zIndex = '9';
         room4.style.opacity = '100';
         hall.style.opacity = '0';
-        r4d1.innerHTML = `hello world`;
+        r4d1.innerHTML = `HALL`;
     })
     r1d1.addEventListener('click', () => {
         room1.style.zIndex = '1';
