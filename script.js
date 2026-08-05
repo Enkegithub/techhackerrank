@@ -1,15 +1,23 @@
 //unlock doors
 function unlock(rm) {
-    let r = document.querySelector(`#${rm}`).parentElement
-    document.querySelector(`#${rm}`).remove();
-    r.insertAdjacentHTML("beforeend",`<div class="ques${rm.at(-1)}"></div>`);
-    return true;
+    return new Promise((resolve) => {
+        let r = document.querySelector(`#${rm}`).parentElement;
+        document.querySelector(`#${rm}`).remove();
+        r.insertAdjacentHTML("beforeend", `<div class="ques${rm.at(-1)}">
+         <div class="submit">SUBMIT</div>
+         </div>`);
+        document.querySelector(".submit").addEventListener("click", () => {
+            document.querySelector(`.ques${rm.at(-1)}`).remove();
+            resolve(true);
+        })
+    })
 }
 
 function main() {
     //variable
     let mute = false;
     let points = 0;
+    let correct = false;
 
     //points representation
     function getPoints() {
@@ -33,12 +41,12 @@ function main() {
     document.querySelector(".speaker").addEventListener("click", () => {
         if (!mute) {
             bgaudio.pause();
-            document.querySelector(".speaker").innerHTML = `<img src="svg/mute.png"></img>`
+            document.querySelector(".speaker").innerHTML = `<img src="svg/mute.gif"></img>`
             mute = true;
         }
         else {
             bgaudio.play()
-            document.querySelector(".speaker").innerHTML = `<img src="svg/speaker.gif" style="height: 135px; width: 145px; right: -20px; bottom: -15px;"></img>`;
+            document.querySelector(".speaker").innerHTML = `<img src="svg/speaker.gif"></img>`;
             mute = false;
         }
     })
@@ -52,7 +60,7 @@ function main() {
         hallDoors[i] = document.querySelector(`.hd${i}`);
         roomDoors[i] = document.querySelector(`.rd${i}`);
     }
-    for (let i = 1; i <= 2; i++) {
+    for (let i = 1; i <= 16; i++) {
         locks[i] = document.querySelector(`#rl${i}`);
     }
 
@@ -89,9 +97,12 @@ function main() {
 
     //lock unlock
     locks.forEach((e1) => {
-        e1.addEventListener("click", (e) => {
-            e.target.insertAdjacentHTML("beforebegin", `<div class="rdl${e.target.id.at(-1)}"></div>`);
-            if (unlock(e.target.id)) {
+        e1.addEventListener("click", async (e) => {
+            let r = e.target.parentElement;
+            correct = await unlock(e.target.id);
+            if (correct) {
+                console.log(r)
+                r.insertAdjacentHTML("beforeend", `<div class="rdl${e.target.id.at(-1)}"></div>`);
                 points++;
                 getPoints();
             }

@@ -91,6 +91,10 @@ body {
     border-radius: 10px;
 }
 
+.rules:hover {
+    cursor: default;
+}
+
 .rules h1 {
     text-decoration: underline;
 }
@@ -183,26 +187,26 @@ body {
 
 /* cursor */
 .hd1,
-.rdl1,
-.r2d2,
+.rdl2,
+.rdl3,
 .rd3,
-.r4d2 {
+.rdl7 {
     cursor: url("svg/left-arrow.svg"), auto;
 }
 
 .hd2,
-.rdl2,
+.rdl1,
 .rd2,
-.r3d2,
-.r4d1 {
+.rdl5,
+.rd4 {
     cursor: url("svg/up-arrow.svg"), auto;
 }
 
 .hd3,
 .rd1,
-.r2d3,
-.r3d3,
-.r4d3 {
+.rdl4,
+.rdl6,
+.rdl8 {
     cursor: url("svg/right-arrow.svg"), auto;
 }
 
@@ -212,23 +216,73 @@ body {
 
 /* lock */
 .lock {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     background: url("svg/lock.svg") center/cover no-repeat;
 }
 
-#rl1 {
+.lock:hover {
+    cursor: url("svg/fingerprint.svg"), auto;
+}
+
+[id^="rl"] {
     position: absolute;
-    top: 40%;
-    left: 60.5%;
+}
+
+#rl1 {
+    top: 45%;
+    left: 62%;
 }
 
 #rl2 {
-    position: absolute;
+    top: 49%;
+    left: 11.5%;
+    transform: skew(12deg, -20deg);
+    rotate: 10deg;
+}
+
+#rl3 {
     top: 40%;
-    left: 9.5%;
-    transform: skewX(2.5deg);
-    rotate: -1deg;
+    left: 12.5%;
+    transform: skew(5deg, -10deg);
+    rotate: 4deg;
+}
+
+#rl4 {
+    top: 42%;
+    left: 79%;
+    transform: skew(0deg, 20deg);
+}
+
+#rl5 {
+    top: 41.5%;
+    left: 59%;
+}
+
+#rl6 {
+    top: 42.5%;
+    left: 77.5%;
+    transform: skew(-2deg, 10deg)
+}
+
+#rl7 {
+    top: 44%;
+    left: 11.5%;
+    transform: skew(15deg, -20deg);
+    rotate: 15deg;
+}
+
+#rl8 {
+    top: 46%;
+    left: 87%;
+    transform: skew(0deg, 5deg);
+}
+
+#rl9 {
+    top: 49%;
+    left: 11.5%;
+    transform: skew(12deg, -20deg);
+    rotate: 10deg;
 }
 
 /* room doors */
@@ -248,21 +302,22 @@ body {
     width: 125px;
     height: 555px;
     padding-top: 55px;
+    transform: skew(0deg, -20deg);
 }
 
 .rdl1 {
-    top: -470px;
-    left: 170px;
-    width: 125px;
-    height: 555px;
+    top: 26%;
+    left: 60%;
+    width: 170px;
+    height: 355px;
     padding-top: 35px;
 }
 
 .rdl2 {
-    top: -130%;
-    left: 60%;
-    width: 155px;
-    height: 385px;
+    top: 15%;
+    left: 10%;
+    width: 140px;
+    height: 535px;
     padding-top: 35px;
 }
 
@@ -275,17 +330,17 @@ body {
     font-family: auto;
 }
 
-.r2d2 {
-    top: -310px;
-    left: 170px;
+.rdl3 {
+    top: 8%;
+    left: 11%;
     width: 165px;
     height: 555px;
     padding-top: 35px;
 }
 
-.r2d3 {
-    top: -120%;
-    left: 77%;
+.rdl4 {
+    top: 10%;
+    left: 75%;
     width: 155px;
     height: 575px;
     padding-top: 35px;
@@ -297,19 +352,20 @@ body {
     width: 155px;
     height: 595px;
     padding-top: 55px;
+    transform: skew(-180deg, -160deg);
 }
 
-.r3d2 {
-    top: -465px;
-    left: 57%;
-    width: 165px;
-    height: 385px;
+.rdl5 {
+    top: 17%;
+    left: 55%;
+    width: 205px;
+    height: 400px;
     padding-top: 35px;
 }
 
-.r3d3 {
-    top: -125%;
-    left: 76%;
+.rdl6 {
+    top: 6%;
+    left: 73%;
     width: 155px;
     height: 525px;
     padding-top: 35px;
@@ -323,29 +379,65 @@ body {
     padding-top: 35px;
 }
 
-.r4d2 {
-    top: -395px;
-    left: 170px;
-    width: 125px;
-    height: 555px;
+.rdl7 {
+    top: 7%;
+    left: 10%;
+    width: 155px;
+    height: 595px;
     padding-top: 35px;
 }
 
-.r4d3 {
-    top: -130%;
-    left: 85%;
-    width: 155px;
-    height: 565px;
+.rdl8 {
+    top: 8%;
+    left: 84.5%;
+    width: 170px;
+    height: 600px;
     padding-top: 35px;
+}
+
+/* ques */
+[class^="ques"] {
+    height: 75vh;
+    width: 75vw;
+    border: #875b34db 2px solid;
+    border-radius: 20px;
+    background-color: #6d4a2b;
+    position: absolute;
+    top: 13%;
+    left: 13%;
+}
+
+.submit {
+    position: relative;
+    top: 93%;
+    left: 90%;
+    height: 25px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #35343491;
+    border: 1px solid #f5f5f554;
+    border-radius: 15px;
+    padding: 15px 50px;
+}
+
+.submit:hover {
+    cursor: pointer;
+    transform: scale(1.125);
 }
 
 /* misc */
-.speaker, .speaker img{
+.speaker,
+.speaker img {
     position: fixed;
     z-index: 10;
-    mix-blend-mode: multiply;
     height: 100px;
     width: 100px;
     right: 0;
     bottom: 0;
+}
+
+.speaker:hover {
+    cursor: pointer;
 }
