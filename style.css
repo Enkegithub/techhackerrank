@@ -103,7 +103,7 @@ body {
     width: 96.7%;
     height: 100%;
     margin-top: 5px;
-    padding-left: 25px;
+    margin-left: 25px;
     overflow: hidden;
     align-self: flex-start;
 }
@@ -140,10 +140,7 @@ body {
 }
 
 /* hall doors */
-.hd1,
-.hd2,
-.hd3,
-.hd4 {
+[class^=hd] {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -226,19 +223,16 @@ body {
     left: 60.5%;
 }
 
+#rl2 {
+    position: absolute;
+    top: 40%;
+    left: 9.5%;
+    transform: skewX(2.5deg);
+    rotate: -1deg;
+}
+
 /* room doors */
-.rd1,
-.rdl1,
-.rdl2,
-.rd2,
-.r2d2,
-.r2d3,
-.rd3,
-.r3d2,
-.r3d3,
-.r4d1,
-.r4d2,
-.r4d3 {
+[class^=rd] {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -321,7 +315,7 @@ body {
     padding-top: 35px;
 }
 
-.r4d1 {
+.rd4 {
     top: 13%;
     left: 60%;
     width: 197px;
@@ -343,4 +337,15 @@ body {
     width: 155px;
     height: 565px;
     padding-top: 35px;
+}
+
+/* misc */
+.speaker, .speaker img{
+    position: fixed;
+    z-index: 10;
+    mix-blend-mode: multiply;
+    height: 100px;
+    width: 100px;
+    right: 0;
+    bottom: 0;
 }
